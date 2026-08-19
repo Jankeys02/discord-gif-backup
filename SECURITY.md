@@ -2,10 +2,11 @@
 
 ## Supported versions
 
-Only the latest release of {{PROJECT_NAME}} is supported. Please update before reporting an issue.
+Only the latest release of discord-gif-backup is supported. Please update before reporting an issue.
 
 ## Reporting a vulnerability
 
 Please **do not** open a public issue for security vulnerabilities.
 
 Instead, use GitHub's private reporting: go to the [Security tab](../../security/advisories/new) and click "Report a vulnerability".
+

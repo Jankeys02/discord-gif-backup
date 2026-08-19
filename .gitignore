@@ -86,3 +86,9 @@ core.*
 .claude/
 NOTES.local.md
 TODO.local.md
+
+# ---- personal backup data (never commit) ----
+gifs.json
+lost.json
+dead-tenor.json
+gifs/

@@ -1,0 +1,11 @@
+{
+  "name": "discord-gif-backup",
+  "version": "1.0.0",
+  "description": "Back up your favorited Discord GIFs to disk, in order, with smart naming",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jankeys02/discord-gif-backup.git"
+  }
+}
