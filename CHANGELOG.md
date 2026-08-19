@@ -5,6 +5,12 @@ All notable changes to this project are documented here. Format loosely follows
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-08-19
+
+### Added
+
+- Automated releases: pushing a `v*` tag creates the GitHub release with CHANGELOG notes and script assets attached (with a tag/package.json version-match guard)
+
 ## [1.1.0] - 2026-08-19
 
 ### Added
