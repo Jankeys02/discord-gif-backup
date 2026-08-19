@@ -4,8 +4,10 @@
 
 $ErrorActionPreference = 'Stop'
 $manifest = Join-Path $PSScriptRoot 'gifs.json'
-# Real Downloads folder (respects a relocated Downloads, unlike $HOME\Downloads)
-$downloads = (New-Object -ComObject Shell.Application).NameSpace('shell:Downloads').Self.Path
+# Real Downloads folder per platform (respects relocated Downloads on Windows/Linux)
+if ($IsWindows) { $downloads = (New-Object -ComObject Shell.Application).NameSpace('shell:Downloads').Self.Path }
+elseif ($IsLinux -and (Get-Command xdg-user-dir -ErrorAction Ignore)) { $downloads = (xdg-user-dir DOWNLOAD) }
+else { $downloads = Join-Path $HOME 'Downloads' }  # macOS / fallback
 $outDir = Join-Path $downloads 'discord-gifs'
 New-Item -ItemType Directory -Force $outDir | Out-Null
 

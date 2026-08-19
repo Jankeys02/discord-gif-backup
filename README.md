@@ -26,7 +26,7 @@ Files are named `001_funny-cat.gif`, `002_deal-with-it.gif`, … so any file exp
 
 ## 🚀 Usage
 
-**Requirements:** Windows, [PowerShell 7+](https://github.com/PowerShell/PowerShell), a browser logged into Discord.
+**Requirements:** [PowerShell 7+](https://github.com/PowerShell/PowerShell) (Windows, macOS, or Linux), a browser logged into Discord.
 
 **Step 1 — extract** (in the browser)
 
