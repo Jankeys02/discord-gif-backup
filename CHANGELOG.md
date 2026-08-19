@@ -5,6 +5,12 @@ All notable changes to this project are documented here. Format loosely follows
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-08-19
+
+### Added
+
+- macOS and Linux support: cross-platform Downloads folder resolution (`shell:Downloads` COM on Windows, `xdg-user-dir` on Linux, `~/Downloads` fallback)
+
 ## [1.0.0] - 2026-08-19
 
 ### Added
