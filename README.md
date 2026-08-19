@@ -28,6 +28,8 @@ Files are named `001_funny-cat.gif`, `002_deal-with-it.gif`, … so any file exp
 
 **Requirements:** [PowerShell 7+](https://github.com/PowerShell/PowerShell) (Windows, macOS, or Linux), a browser logged into Discord.
 
+**Get the scripts:** grab both from the [latest release](https://github.com/Jankeys02/discord-gif-backup/releases/latest) — direct links: [`backup-gifs.js`](https://github.com/Jankeys02/discord-gif-backup/releases/latest/download/backup-gifs.js) · [`download.ps1`](https://github.com/Jankeys02/discord-gif-backup/releases/latest/download/download.ps1) (these always point at the newest version).
+
 **Step 1 — extract** (in the browser)
 
 1. Open `discord.com/app`, press <kbd>F12</kbd> → **Console**
