@@ -1,0 +1,42 @@
+name: Security Audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "package.json"
+      - "package-lock.json"
+  pull_request:
+    branches: [main]
+    paths:
+      - "package.json"
+      - "package-lock.json"
+  schedule:
+    - cron: "0 8 * * 1"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    name: npm audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - run: npm ci --ignore-scripts
+
+      # Fail on new high/critical vulns in production dependencies.
+      - name: Audit production dependencies
+        run: npm audit --omit=dev --audit-level=high
+
+      # Full dev-dependency report for visibility, never fails CI.
+      - name: Audit dev dependencies (report only)
+        run: npm audit || true
+
+      # Catch any critical-severity vuln anywhere in the tree.
+      - name: Check for critical vulnerabilities
+        run: npm audit --audit-level=critical

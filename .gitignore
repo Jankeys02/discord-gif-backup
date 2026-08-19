@@ -1,0 +1,88 @@
+# ---- dependencies ----
+node_modules/
+.pnp/
+.pnp.js
+jspm_packages/
+
+# ---- build output ----
+dist/
+build/
+out/
+.vite/
+.turbo/
+.next/
+.nuxt/
+.parcel-cache/
+*.tsbuildinfo
+
+# ---- logs ----
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ---- env / secrets (CRITICAL) ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+secrets/
+credentials.json
+creds.json
+*.secret
+auth.json
+
+# ---- editor / IDE ----
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.example.json
+.idea/
+*.iml
+*.swp
+*.swo
+.history/
+
+# ---- OS junk ----
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ---- test / coverage ----
+coverage/
+.nyc_output/
+*.lcov
+test-results/
+playwright-report/
+junit.xml
+
+# ---- temp / scratch ----
+tmp/
+temp/
+.tmp/
+.cache/
+*.bak
+*.orig
+*.rej
+*~
+
+# ---- diagnostic dumps ----
+*.dmp
+core.*
+*.heapsnapshot
+
+# ---- local plan / scratch notes ----
+.claude-local/
+.claude/
+NOTES.local.md
+TODO.local.md
