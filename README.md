@@ -7,9 +7,15 @@
 
 **Back up every GIF you ever favorited on Discord — before link rot gets them.**
 
-Tenor URL schemes die, Discord attachment signatures expire, and Discord's Tenor integration is being decommissioned. This tool saves all your favorites to disk, oldest → newest, with filenames that preserve your favoriting order.
+Google shut down the Tenor API in June 2026 and Discord's GIF search already runs on replacements — your favorites still load from Tenor's media CDN *for now*, with no promise of tomorrow. This tool saves all of them to disk, oldest → newest, with filenames that preserve your favoriting order.
 
 No bot. No extension. No Discord API calls. No messages sent. Two steps, done.
+
+## 📜 Why this exists
+
+Discord's GIF picker was powered by Tenor, which Google acquired in 2018. On **January 13, 2026**, Google [announced the deprecation of the Tenor API](https://www.shacknews.com/article/149852/google-tenor-api-service-discontinued-twitter-discord-whatsapp-bluesky), halting new integrations immediately; on **June 30, 2026**, it [pulled the plug entirely](https://tech.slashdot.org/story/26/06/30/2131216/google-pulls-the-plug-on-tenor-api-killing-gif-pickers-around-the-web) — GIF search broke the same day across Discord, WhatsApp, X, and Bluesky, and Discord began [testing Giphy and Klipy as replacements](https://piunikaweb.com/2026/01/14/discord-gif-search-change-tenor-api-shutdown/).
+
+Favorited GIFs [still render for now](https://www.pcgamesn.com/discord/not-losing-gifs) because favorites are stored in your Discord settings and loaded straight from Tenor's media CDN rather than through the dead API. But that CDN's future has no guarantee — and history says don't wait: Tenor already deleted its previous media URL scheme once (during the Google migration), which silently killed every favorite saved under old-format links. In the library this tool was built against, **~26% of favorites pointed at URLs that no longer existed** and had to be recovered through fallback routes — or were lost for good. This tool gets the rest onto your own disk while the current CDN still answers.
 
 ## ✨ What it does
 
